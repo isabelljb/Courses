@@ -1,0 +1,63 @@
+echo "# Courses" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/isabelljb/Courses.git
+git push -u origin master
+
+
+Question 1
+Suppose you learn a word embedding for a vocabulary of 10000 words. Then the embedding vectors should be 10000 dimensional, so as to capture the full range of variation and meaning in those words.
+False.
+
+
+Question 2
+What is t-SNE?
+    A linear transformation that allows us to solve analogies on word vectors
+(*) A non-linear dimensionality reduction technique
+    A supervised learning algorithm for learning word embeddings
+    An open-source sequence modeling library
+
+
+Question 3
+Suppose you download a pre-trained word embedding which has been trained on a huge corpus of text. You then use this word embedding to train an RNN for a language task of recognizing if someone is happy from a short snippet of text, using a small training set.
+Then even if the word “ecstatic” does not appear in your small training set, your RNN might reasonably be expected to recognize “I’m ecstatic” as deserving a label 
+True.
+
+
+Question 5
+Let E be an embedding matrix, and let o1234o_{1234} be a one-hot vector corresponding to word 1234. Then to get the embedding of word 1234, why don’t we call 
+E∗o1234E * o_{1234} in Python?
+It is computationally wasteful.
+The element-wise multiplication will be extremely inefficient.
+
+Question 6
+When learning word embeddings, we create an artificial task of estimating P(target∣context). It is okay if we do poorly on this artificial prediction task; the more important by-product of this task is that we learn a useful set of word embeddings. 
+True.
+
+Question 7
+In the word2vec algorithm, you estimate P(t∣c), where t is the target word and c is a context word. How are t and c chosen from the training set? 
+c and t are chosen to be nearby words.
+
+
+Question 8
+Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings. The word2vec model uses the following softmax function.
+Thetat and ec are both 500 dimensional vectors.
+They are both trained with an optimization algorithm such as Adam or gradient descent.
+
+
+Question 9
+Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings.The GloVe model minimizes this objective:
+Theta and e should be initialized randomly at the beginning of training.
+Xij is the number of times word j appears in the context of word i.
+The weighting function must satisfy f(0) = 0.
+
+
+Question 10
+You have trained word embeddings using a text dataset of m1 words. You are considering using these word embeddings for a language task, for which you have a separate labeled dataset of 
+m2 words. Keeping in mind that using word embeddings is a form of transfer learning, under which of these circumstance would you expect the word embeddings to be helpful?
+m1 >> m2
+
+
+
+
